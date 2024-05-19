@@ -7,18 +7,13 @@ import Notification from "./components/Notification/Notification";
 
 function App() {
   const [reviews, setReviews] = useState(()=>{
-    const localReviews = localStorage.getItem(reviews);
+    const localReviews = localStorage.getItem('reviews');
     if (localReviews) {
         return  JSON.parse(localReviews);
         }
         return { good: 0, bad: 0, neutral: 0 }
-  }); 
-    
-    
-
-
-
-
+  });  
+  
   useEffect(() => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
   }, [reviews]);

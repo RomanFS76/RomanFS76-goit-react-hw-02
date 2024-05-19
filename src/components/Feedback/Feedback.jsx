@@ -1,5 +1,3 @@
-
-
 const Feedback = ({ good, neutral, bad, total, positive }) => {
   return (
     <>
@@ -13,5 +11,3 @@ const Feedback = ({ good, neutral, bad, total, positive }) => {
 };
 
 export default Feedback;
-
-
