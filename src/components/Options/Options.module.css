@@ -1,0 +1,14 @@
+.flex {
+    display: flex;
+}
+
+.wrapperFeedback {
+    gap: 15px;
+}
+
+.feedbackBtn {
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+}

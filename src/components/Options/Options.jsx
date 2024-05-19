@@ -1,11 +1,17 @@
-const Options = ({ updateFeedback,total }) => {
+import clsx from "clsx";
+import css from "./Options.module.css";
+
+const Options = ({ updateFeedback, total }) => {
   return (
     <>
-      <button onClick={() => updateFeedback("good")}>Good</button>
-      <button onClick={() => updateFeedback("bad")}>Bad</button>
-      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
-      {total>=1 && <button onClick={() => {total=0}}>Reset</button>}
-      
+      <div className={clsx(css.flex, css.wrapperFeedback)}>
+        <button className={css.feedbackBtn} onClick={() => updateFeedback("good")}>Good</button>
+        <button className={css.feedbackBtn} onClick={() => updateFeedback("bad")}>Bad</button>
+        <button className={css.feedbackBtn} onClick={() => updateFeedback("neutral")}>Neutral</button>
+        {total > 0 && (
+          <button className={clsx(css.feedbackBtn, css.reset) } onClick={() => updateFeedback("reset")}>Reset</button>
+        )}
+      </div>
     </>
   );
 };
